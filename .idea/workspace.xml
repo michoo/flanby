@@ -2,23 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95e2f5d3-48f6-4901-a407-57b6e52fc04a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flanby.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flanby/flanby.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flanby/job.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/flamby.log.2019-12-28" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/flanby.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logging.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/masscan-test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nmap-long.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nmap-test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nmap-script.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/results-vulners.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/http-vulners-regex.nse" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nselib/data/http-vulners-paths.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nselib/data/http-vulners-regex.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/vulners.nse" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flanby/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/flanby/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flanby/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/flanby/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/flamby.log.2019-12-28" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/flanby.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,10 +37,11 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scripts" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/flanby" />
     </key>
@@ -99,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577567500829</updated>
       <workItem from="1577567501974" duration="5411000" />
-      <workItem from="1577590130373" duration="10260000" />
+      <workItem from="1577590130373" duration="13753000" />
     </task>
     <servers />
   </component>

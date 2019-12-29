@@ -49,10 +49,9 @@ software name and its version (or CPE), so one can still have the desired privac
 --   </table>
 -- </table>
 
-dependencies = {"http-vulners-regex"}
 author = 'gmedian AT vulners DOT com'
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
-categories = {"vuln", "safe", "external", "default"}
+categories = {"vuln", "safe", "external"}
 
 
 local http = require "http"
@@ -62,13 +61,13 @@ local table = require "table"
 local nmap = require "nmap"
 local stdnse = require "stdnse"
 
-local api_version="1.4"
+local api_version="1.2"
 local mincvss=stdnse.get_script_args("vulners.mincvss")
 mincvss = tonumber(mincvss) or 0.0
 
 portrule = function(host, port)
   local vers=port.version
-  return vers ~= nil and vers.version ~= nil or (host.registry.vulners_cpe ~= nil)
+  return vers ~= nil and vers.version ~= nil
 end
 
 local cve_meta = {
@@ -211,29 +210,11 @@ action = function(host, port)
   local response
   local output
 
-
   for i, cpe in ipairs(port.version.cpe) do
-    stdnse.debug1("Analyzing cpe " .. cpe)
-    output = get_vulns_by_cpe(cpe)
+    output = get_vulns_by_cpe(cpe, port.version)
     if output then
       tab[cpe] = output
       changed = true
-    end
-  end
-  
-  -- NOTE[gmedian]: check whether we have pre-matched CPEs in registry (from http-vulners-regex.nse in particular)
-  if host.registry.vulners_cpe ~= nil and #host.registry.vulners_cpe > 0 then 
-    stdnse.debug1("Found some CPEs in host registry.")
-    for i, cpe in ipairs(host.registry.vulners_cpe) do
-      -- avoid duplicates in output, will still however make redundant requests
-      if tab[cpe] == nil then
-        stdnse.debug1("Analyzing pre-matched cpe " .. cpe)
-        output = get_vulns_by_cpe(cpe)
-        if output then
-          tab[cpe] = output
-          changed = true
-        end
-      end
     end
   end
 

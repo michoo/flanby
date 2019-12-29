@@ -12,13 +12,13 @@ scheduler.add_jobstore(DjangoJobStore(), "default")
 
 @register_job(scheduler, "interval", minutes=20)
 def full_scan():
-    nmScan = nmap.PortScanner()
-    nmScan.scan(hosts='192.168.1.1-254', ports='21-443')
-
-    # run a loop to print all the found result about the ports
-    for host in nmScan.all_hosts():
-        logger.debug('Host : %s (%s)' % (host, nmScan[host].hostname()))
-        logger.debug('State : %s' % nmScan[host].state())
+    # nmScan = nmap.PortScanner()
+    # nmScan.scan(hosts='192.168.1.1-254', ports='21-443')
+    #
+    # # run a loop to print all the found result about the ports
+    # for host in nmScan.all_hosts():
+    #     logger.debug('Host : %s (%s)' % (host, nmScan[host].hostname()))
+    #     logger.debug('State : %s' % nmScan[host].state())
         # for proto in nmScan[host].all_protocols():
         #     logger.debug('| Protocol : %s' % proto)
         #
@@ -26,7 +26,7 @@ def full_scan():
         #     # lport.sort()
         #     for port in lport:
         #         logger.debug('-->port : %s\tstate : %s' % (port, nmScan[host][proto][port]['state']))
-    logger.debug("full_scan jod done")
+    logger.debug("full_scan job done")
 
 
 def callback_result(host, scan_result):
@@ -36,11 +36,11 @@ def callback_result(host, scan_result):
 
 @register_job(scheduler, "interval", minutes=20)
 def async_scan():
-    nmScan = nmap.PortScannerAsync()
-    nmScan.scan(hosts='192.168.1.1-254', ports='21-443', callback=callback_result)
-    while nmScan.still_scanning():
-        pass
-        # logger.debug("Waiting ...")
+    # nmScan = nmap.PortScannerAsync()
+    # nmScan.scan(hosts='192.168.1.1-254', ports='21-443', callback=callback_result)
+    # while nmScan.still_scanning():
+    #     pass
+    #     # logger.debug("Waiting ...")
 
     # for host in nmScan.all_hosts():
     #     logger.debug('Host : %s (%s)' % (host, nmScan[host].hostname()))
@@ -52,7 +52,7 @@ def async_scan():
     #         # lport.sort()
     #         for port in lport:
     #             logger.debug('-->port : %s\tstate : %s' % (port, nmScan[host][proto][port]['state']))
-    logger.debug("async_scan jod done")
+    logger.debug("async_scan job done")
 
 register_events(scheduler)
 

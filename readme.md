@@ -22,9 +22,21 @@ https://github.com/robertdavidgraham/masscan
 ## scripts nmap
 https://github.com/vulnersCom/nmap-vulners
 nmap -oX - -sV --script=/home/fred/workspace/projects/python/flanby/scripts/vulners.nse 192.168.1.1
+https://nmap.org/nsedoc/categories/vuln.html
 
-
+## default command
+// démarrer le serveur
+./manage.py runserver --noreload
+// lancer toutes les mises à jours de migration
+./manage.py migrate
+// mettre a jours les procédures de migrations
+./manage.py makemigrations nmap
+//générer le script sql de migration
+./manage.py sqlmigrate nmap 0001
+//créer le superuser (fred/asdf1234)
+./manage.py createsuperuser --email admin@example.com --username admin
 
 ## inspiration
 https://github.com/GoSecure/freshonions-torscraper
 https://github.com/cloudflare/flan
+https://pythonhosted.org/ifaddr/

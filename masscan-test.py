@@ -18,7 +18,7 @@ logging.config.dictConfig(config)
 logger = logging.getLogger("flanby")
 
 mas = masscan.PortScanner()
-mas.scan('192.168.1.1/24', ports='21-443', arguments='--max-rate 1000000')
+mas.scan('192.168.1.1/24', arguments='--max-rate 1000000')
 logger.debug(mas.scan_result)
 
 logger.debug("masscan job done")

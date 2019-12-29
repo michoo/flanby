@@ -12,7 +12,7 @@ def after_start():
                 "eftichess", "eftifont", "eftipiti", "eftirobot", "eftitalic", "eftiwater", "epic",
                 "fender", "fourtops", "fuzzy", "goofy", "gothic", "graffiti", "hollywood", "invita", "italic", "ivrit",
                 "jazmine", "jerusalem", "katakana",
-                "kban", "larry3d", "lcd", "lean", "letters", "linux", "lockergnome", "madrid", "marquee", "maxfour",
+                "kban", "larry3d", "lcd", "lean", "letters", "linux", "lockergnome", "marquee", "maxfour",
                 "mike", "mini", "mirror", "mnemonic", "morse", "moscow", "nancyj-fancy", "nancyj-underlined",
                 "nancyj", "nipples", "ntgreek", "o8", "ogre", "pawp", "peaks", "pebbles", "pepper", "poison",
                 "puffy", "pyramid", "rectangles", "relief", "relief2", "rev", "roman", "rot13", "rounded",
@@ -22,7 +22,7 @@ def after_start():
                 "tanja", "tengwar", "term", "thick", "thin", "threepoint", "ticks", "ticksslant", "tinker-toy",
                 "tombstone", "trek", "tsalagi", "twopoint", "univers", "usaflag", "weird"]
     fontValue = random.choice(fontList)
-    ascii_banner = pyfiglet.figlet_format("FlAmBy", font=fontValue)
+    ascii_banner = pyfiglet.figlet_format("FlAnBy", font=fontValue)
     print("\n")
     print(ascii_banner)
     print(fontValue)

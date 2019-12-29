@@ -1,0 +1,35 @@
+version: 1
+
+formatters:
+    simple:
+        format: "%(asctime)s %(levelname)s: %(message)s"
+
+    complex:
+        format: "%(asctime)s %(levelname)s: %(message)s %(pathname)s %(lineno)d-%(process)d %(thread)d"
+
+disable_existing_loggers: False
+
+handlers:
+    console:
+        class: logging.StreamHandler
+        formatter: simple
+
+    file:
+        class: logging.handlers.TimedRotatingFileHandler
+        when: midnight
+        backupCount: 180
+        formatter: simple
+        filename : './log/flanby.log'
+
+loggers:
+
+    django:
+        level: INFO
+        handlers: [console, file]
+        propagate: yes
+
+    flanby:
+        level: DEBUG
+        handlers: [console, file]
+        propagate: yes
+

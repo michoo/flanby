@@ -12,6 +12,20 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+
+LOGGING_CONFIG = None
+import logging.config
+
+import yaml
+
+# logging settings
+with open('./logging.yml', 'rt') as f:
+    config = yaml.safe_load(f.read())
+    f.close()
+
+logging.config.dictConfig(config)
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -37,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_apscheduler',
 ]
 
 MIDDLEWARE = [

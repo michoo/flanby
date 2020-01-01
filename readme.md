@@ -40,3 +40,6 @@ https://nmap.org/nsedoc/categories/vuln.html
 https://github.com/GoSecure/freshonions-torscraper
 https://github.com/cloudflare/flan
 https://pythonhosted.org/ifaddr/
+
+// choices
+https://docs.djangoproject.com/en/3.0/topics/db/models/

@@ -24,7 +24,7 @@ handlers:
 loggers:
 
     django:
-        level: INFO
+        level: WARNING
         handlers: [console, file]
         propagate: yes
 

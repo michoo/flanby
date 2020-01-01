@@ -1,0 +1,121 @@
+body {
+  font-size: 12px;
+  background-color: black;
+  font-family: monospace;
+  color: #DDDDDD;
+  line-height: 18px;
+  margin: 0 auto;
+  padding-top: 4.5rem;
+  /*padding: 1em 0 1em 0;*/
+}
+
+a {
+  color: #5cf442;
+  text-decoration: none;
+}
+
+i.green:before {
+    color: green;
+}
+i.red:before {
+    color: red;
+}
+
+
+pre {
+  /*background-color: black;*/
+  /*margin: 0 0 0px;*/
+  color: #DDDDDD;
+  /*border: 0px;*/
+  /*border-radius: 0px;*/
+  /*padding: 0px;*/
+
+}
+
+a {
+  color: #9f9fe7;
+  text-decoration: none;
+}
+
+.table{
+    color: white;
+}
+
+.block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+ik {
+  color: #87ffff;
+}
+
+y {
+  color: #f0c674;
+}
+
+gr {
+  color: #b5bd68;
+}
+
+r {
+  color: #9e0034;
+}
+
+w {
+  color: #ffffff;
+}
+
+pink {
+  color: #f4b6e5;
+}
+
+bb {
+  color: #5cc2ca;
+}
+
+purp {
+  color: #7a80a2;
+}
+
+l {
+  color: #c5c8c6;
+}
+
+lg {
+  color: #9de9a9;
+}
+
+sea {
+  color: #93ff4c;
+}
+
+uo {
+  color: #87ffff;
+}
+
+uy {
+  color: #5f5fd7;
+}
+
+ur {
+  color: #cccccc;
+}
+
+uw {
+  color: #ffffff;
+}
+
+ug {
+  color: #5f5f87;
+}
+
+ub {
+  color: #00d7d7;
+}
+
+xo {
+  color: #ffa3aa;
+}

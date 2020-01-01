@@ -45,6 +45,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'nmap_app.apps.NmapAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -134,3 +135,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static')
+        ]
+
+FLANBY_TIME_SCAN_JOB = 20
+FLANBY_NETWORK_SCAN_JOB = '192.168.1.42'

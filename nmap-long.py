@@ -19,9 +19,9 @@ logger = logging.getLogger("flanby")
 
 
 nmScan = nmap.PortScanner()
-nmScan.scan(hosts='192.168.1.1/24', ports='21-443')
+nmScan.scan(hosts='192.168.1.1')
 
-
+print(nmScan)
 for host in nmScan.all_hosts():
     logger.debug('Host : %s (%s)' % (host, nmScan[host].hostname()))
     logger.debug('State : %s' % nmScan[host].state())

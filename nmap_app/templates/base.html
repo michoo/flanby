@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Flanby</title>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <script src="{% static 'jquery/jquery-3.4.1.min.js' %}" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'flanby.css' %}" crossorigin="anonymous">
+    <script src="{% static 'flanby.js' %}" crossorigin="anonymous"></script>
+
+    <link href="{% static 'fontawesome/css/all.css' %}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/"><img src="{% static 'flanby.jpg' %}" alt="Flanby" width="30" height="30">  <pink>Flanby</pink></a>
+         <span class="navbar-text navbar-right">
+        Monitor the network...
+        </span>
+
+    </nav>
+    <main role="main">
+    {% block content %}
+    {% endblock %}
+    </main>
+</body>
+</html>

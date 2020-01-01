@@ -15,12 +15,13 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from flanby.flanby import *
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('nmap_app.urls')),
 ]
 
 after_start()

@@ -23,7 +23,8 @@ def index(request):
 
 def detail(request, server_ip):
     # TODO: a better code with cleaning input to avoid sql injection
-    scan_job()
+    #scan_job()
+    logger.debug("list ports from server {}".format(server_ip))
     try:
         servers = Server.objects.filter(server_ip=server_ip)
 

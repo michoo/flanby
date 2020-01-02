@@ -1,5 +1,4 @@
 import random
-# import flanby.job
 import pyfiglet
 
 

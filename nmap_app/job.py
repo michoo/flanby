@@ -21,7 +21,7 @@ scheduler.add_jobstore(DjangoJobStore(), "default")
 
 @register_job(scheduler, "interval", minutes=FLANBY_TIME_SCAN_JOB)
 def scan_job():
-    logger.debug("I'm a test job!")
+    logger.debug("Starting scan job!")
     latest_server_list = Server.objects.all()
     # logger.debug(latest_server_list[0])
 
@@ -59,31 +59,35 @@ def scan_job():
             # lport.sort()
             for port in lport:
                 logger.debug('-->port : %s\tstate : %s' % (port, nmScan[host][proto][port]['state']))
+                comment = "product: {}, extrainfo: {}, reason: {}, version: {}, conf: {}, cpe: {}".format(
+                    nmScan[host][proto][port]['product'],
+                    nmScan[host][proto][port]['extrainfo'],
+                    nmScan[host][proto][port]['reason'],
+                    nmScan[host][proto][port]['version'],
+                    nmScan[host][proto][port]['conf'],
+                    nmScan[host][proto][port]['cpe'])
                 if port in ports_obj:
+
                     try:
-                        port_obj = Port.objects.filter(port_number=port, server_id=server_id)
-                        port_obj.last_update=timezone.now()
+                        port_obj = Port.objects.filter(port_number=port, server_id=server_id)[0]
+                        port_obj.last_update = timezone.now()
                         port_obj.status = nmScan[host][proto][port]['state']
+                        port_obj.port_name = nmScan[host][proto][port]['name']
+                        port_obj.comment = comment
+                        port_obj.protocol = proto
                         port_obj.save()
                     except Port.DoesNotExist:
                         pass
 
                 else:
                     date_to_save = timezone.now()
-                    comment = "product: {}, extrainfo: {}, reason: {}, version: {}, conf: {}, cpe: {}".format(
-                        nmScan[host][proto][port]['product'],
-                        nmScan[host][proto][port]['extrainfo'],
-                        nmScan[host][proto][port]['reason'],
-                        nmScan[host][proto][port]['version'],
-                        nmScan[host][proto][port]['conf'],
-                        nmScan[host][proto][port]['cpe'])
                     port_obj = Port.objects.create(port_name=nmScan[host][proto][port]['name'], protocol=proto,
                                                    port_number=port, comment=comment,
                                                    status= nmScan[host][proto][port]['state'],
                                                    creation_date=date_to_save, last_update=date_to_save,
                                                    server_id=server_id)
 
-    logger.debug("scan job done")
+    logger.debug("Scan job done")
 
 
 register_events(scheduler)

@@ -1,4 +1,6 @@
-#import nmap_app.job
+import nmap_app.job
+from nmap_app.job import *
+
 
 def after_start():
-    pass
+    pass #scan_job()

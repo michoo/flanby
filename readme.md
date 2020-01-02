@@ -1,6 +1,6 @@
 # Flanby
 
-It's a tool to monitoring and persist machine status, open ports and possible vuln(next release). 
+It's a tool for monitoring from the network of machine status, opened ports and possible vuln (next release). 
 It's based on nmap, python, django and sqlite
 It's implemented with nmap but next release I will use masscan too.
 

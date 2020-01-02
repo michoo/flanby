@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95e2f5d3-48f6-4901-a407-57b6e52fc04a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,17 +55,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/nmap_app/templates/nmap" />
-      <recent name="$PROJECT_DIR$/nmap_app" />
-      <recent name="$PROJECT_DIR$/scripts" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/flanby" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/bootstrap" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/nmap_app/templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/nmap_app/templates/nmap" />
+      <recent name="$PROJECT_DIR$/nmap_app" />
+      <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="$PROJECT_DIR$/flanby" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -125,7 +125,7 @@
       <workItem from="1577800430023" duration="4856000" />
       <workItem from="1577829068980" duration="5787000" />
       <workItem from="1577898393768" duration="4846000" />
-      <workItem from="1577916733102" duration="5421000" />
+      <workItem from="1577916733102" duration="5958000" />
     </task>
     <servers />
   </component>
